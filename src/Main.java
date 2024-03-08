@@ -50,10 +50,30 @@ public class Main {
 //        Assim repitiria o processo mais uma vez e conseguiria descobrir as 3.
 
 //        5)
+        System.out.print("Digite uma palavra: ");
+        sc.nextLine();
+        String palavraOriginal = sc.nextLine();
 
+        String palavraInvertida = palavraInvertida(palavraOriginal);
+
+        System.out.println("Palavra original: " + palavraOriginal);
+        System.out.println("Palavra invertida: " + palavraInvertida);
 
 
     sc.close();
+    }
+//    5)
+    public static String palavraInvertida(String palavra) {
+        String resultado = "";
+
+        if (palavra == null) {
+            return palavra;
+        }
+
+        for (int i = palavra.length() - 1; i >= 0; i--) {
+            resultado = resultado + palavra.charAt(i);
+        }
+        return resultado;
     }
 
 }
